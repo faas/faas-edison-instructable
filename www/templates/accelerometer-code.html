@@ -1,0 +1,33 @@
+<pre hljs>
+
+var adxlmma = require('jsupm_mma7660');
+
+var adxl = new adxlmma.MMA7660(
+  adxlmma.MMA7660_I2C_BUS,
+  adxlmma.MMA7660_DEFAULT_I2C_ADDR);
+
+adxl.setModeStandby();
+adxl.setSampleRate(adxlmma.MMA7660.AUTOSLEEP_64);
+adxl.setModeActive();
+
+var x, y, z;
+x = adxlmma.new_intp();
+y = adxlmma.new_intp();
+z = adxlmma.new_intp();
+
+var ax, ay, az;
+ax = adxlmma.new_floatp();
+ay = adxlmma.new_floatp();
+az = adxlmma.new_floatp();
+
+exports.axelStatus = function(cb) {
+  adxl.getRawValues(x, y, z);
+  adxl.getAcceleration(ax, ay, az);
+  cb(null, {
+    'x': roundNum( adxlmma.floatp_value(ax), 6),
+    'y': roundNum( adxlmma.floatp_value(ay), 6),
+    'z': roundNum( adxlmma.floatp_value(az), 6)
+  });
+}
+
+</pre>

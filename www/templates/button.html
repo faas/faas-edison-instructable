@@ -1,0 +1,12 @@
+    <div ng-if="noService" ng-include src="'/templates/unavailable.html'"></div>
+
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="title">Button Status</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button class="button button-{{buttonPressClass}}">{{buttonPress}}</button>
+      </div>
+    </div>

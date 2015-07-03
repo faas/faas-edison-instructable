@@ -1,0 +1,61 @@
+<ion-view>
+  <ion-nav-title>
+    <img class="logo" src="img/logo-top.png">
+  </ion-nav-title>
+  <ion-content class="padding">
+    <ion-slide-box pager-click="navSlide(index)">
+      <ion-slide>
+        <h3>Getting Started</h3>
+        <p>Faas is the quickest way for you to<br> securely publish web APIs on your<br>Intel Edison module.</p>
+        <br>
+        <img src="img/edison-grove.jpg">
+<div class="code-area-slide">
+<pre hljs>
+            // simple installation
+            $ npm install faas
+</pre>
+</div>
+      </ion-slide>
+      <ion-slide>
+        <h3>Faas Secured API keys</h3>
+        <p>You get the simplicity of Dropbox™<br> for your APIs.</p>
+        <br>
+        <img src="img/dashboard.jpg">
+      </ion-slide>
+      <ion-slide>
+        <h3>Write your secure APIs</h3>
+        <p>Simply put your code in "my-apis" folder, and call the public sub-routines from anywhere in the world, via a secure pipeline.</p>
+        <br>
+<div class="code-area-slide">
+<pre hljs>
+// my-apis/edison.js
+
+var groveSensor = require('jsupm_grove');
+
+var light = new groveSensor.GroveLight(0);
+
+exports.lightStatus = function(cb) {
+  cb(null, {
+    'lux': light.value()
+  });
+}
+</pre>
+</div>
+      </ion-slide>
+      <ion-slide>
+        <h3>Sign up for a Faas Account</h3>
+        <p>To get things started, please sign up an account on Faas.io and use the generated unique api key and secret.</p>
+        <br>
+        <img src="img/faas-io.jpg">
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+  <ion-footer-bar>
+    <button class="button button-positive button-clear no-animation" ng-click="skip()">
+      Skip
+    </button>
+    <button class="button button-positive button-clear no-animation" ng-click="close()">
+      Close
+    </button>
+  </ion-footer-bar>
+</ion-view>

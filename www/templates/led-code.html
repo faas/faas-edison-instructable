@@ -1,0 +1,55 @@
+<pre hljs>
+
+var mraa = require('mraa');
+
+var redLED = new mraa.Gpio(4);
+var greenLED = new mraa.Gpio(3);
+var blueLED = new mraa.Gpio(2);
+
+redLED.dir(mraa.DIR_OUT);
+greenLED.dir(mraa.DIR_OUT);
+blueLED.dir(mraa.DIR_OUT);
+
+exports.redLEDon = function(cb) {
+  redLED.write(1);
+  cb(null, {
+    'status': 'on'
+  });
+}
+
+exports.redLEDoff = function(cb) {
+  redLED.write(0);
+  cb(null, {
+    'status': 'off'
+  });
+}
+
+exports.greenLEDon = function(cb) {
+  greenLED.write(1);
+  cb(null, {
+    'status': 'on'
+  });
+}
+
+exports.greenLEDoff = function(cb) {
+  greenLED.write(0);
+  cb(null, {
+    'status': 'off'
+  });
+}
+
+exports.blueLEDon = function(cb) {
+  blueLED.write(1);
+  cb(null, {
+    'status': 'on'
+  });
+}
+
+exports.blueLEDoff = function(cb) {
+  blueLED.write(0);
+  cb(null, {
+    'status': 'off'
+  });
+}
+
+</pre>

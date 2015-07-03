@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-nav-title>
+    <img class="logo" src="img/logo-top.png">
+  </ion-nav-title>
+  <ion-content class="padding">
+    <div class="list list-inset no-background">
+      <form ng-submit="executeLogin(login)">
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <input type="text" placeholder="Email Address" ng-model="login.email">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="login.password">
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="button button-block button-calm" ng-disabled="!loginValid()" type="submit">Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

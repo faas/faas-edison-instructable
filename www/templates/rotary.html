@@ -1,0 +1,28 @@
+    <div ng-if="noService" ng-include src="'/templates/unavailable.html'"></div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Value</button>
+          <button class="button button-energized">{{rotary.V}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Degrees</button>
+          <button class="button button-energized">{{rotary.D}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Radians</button>
+          <button class="button button-energized">{{rotary.R}}</button>
+        </div>
+      </div>
+    </div>

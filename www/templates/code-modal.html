@@ -1,0 +1,11 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title calm">{{sensor.title}}</h1>
+    <div class="button button-clear" ng-click="closeCodeModal()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="code-area">
+      <div ng-include="'templates/' + sensor.page + '-code.html'" include-replace></div>
+    </div>
+  </ion-content>
+</ion-modal-view>

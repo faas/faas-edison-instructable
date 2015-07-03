@@ -1,0 +1,10 @@
+    <div ng-if="noService" ng-include src="'/templates/unavailable.html'"></div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Illuminance</button>
+          <button class="button button-balanced">{{light.lux}}</button>
+        </div>
+      </div>
+    </div>

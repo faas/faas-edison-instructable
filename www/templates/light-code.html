@@ -1,0 +1,13 @@
+<pre hljs>
+
+var groveSensor = require('jsupm_grove');
+
+var light = new groveSensor.GroveLight(0);
+
+exports.lightStatus = function(cb) {
+  cb(null, {
+    'lux': light.value()
+  });
+}
+
+</pre>

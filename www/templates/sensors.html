@@ -1,0 +1,14 @@
+<ion-view view-title="{{sensor.title}}">
+  <ion-content class="padding">
+    <div class="button-bar">
+      <button class="button button-energized" ng-click="showConnectionModal()">
+        Connection
+      </button>
+      <button class="button button-energized" ng-click="showCodeModal()">
+        Code
+      </button>
+    </div>
+    <br>
+    <div ng-include="'templates/' + sensorName + '.html'"></div>
+  </ion-content>
+</ion-view>

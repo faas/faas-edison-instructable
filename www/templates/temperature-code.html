@@ -1,0 +1,16 @@
+<pre hljs>
+
+var groveSensor = require('jsupm_grove');
+
+var temp = new groveSensor.GroveTemp(2);
+
+exports.temperatureStatus = function(cb) {
+  var c = temp.value();
+  var f = c * 9.0 / 5.0 + 32.0;
+  cb(null, {
+    'c': c,
+    'f': Math.round(f)
+  });
+}
+
+</pre>

@@ -1,0 +1,68 @@
+/* Empty. Add your own CSS if you like */
+ul.list {
+  list-style-type: disc;
+}
+
+ul.list li {
+  margin-left: 20px;
+}
+
+img.logo {
+  margin-top: 5px;
+  height: 32px;
+}
+
+img.full-width {
+  width: 100%;
+  height: auto;
+}
+
+.item-text-wrap h2 {
+  line-height: 80px;
+}
+
+.code-area {
+  height: 100%;
+  text-align: left;
+  background-color: #272822;
+}
+
+.code-area-slide {
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+  background-color: #272822;
+}
+
+.slider {
+  height: 100%;
+  text-align: center
+}
+
+.scroll {
+  height: 100%
+}
+
+.slider-slide h3 {
+  padding-top: 10%;
+}
+
+.slider-slide p {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.slider-slide img {
+  height: 40%;
+  padding: 20px;
+}
+
+@media (max-width: 400px) {
+  .code-area {
+    font-size: 11px;
+  }
+  .code-area-slide {
+    font-size: 11px;
+  }
+}

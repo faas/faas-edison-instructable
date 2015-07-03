@@ -1,0 +1,19 @@
+    <div ng-if="noService" ng-include src="'/templates/unavailable.html'"></div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Celsius</button>
+          <button class="button button-calm">{{temperature.C}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <div class="button-bar">
+          <button class="button button-outline">Fahrenheit</button>
+          <button class="button button-calm">{{temperature.F}}</button>
+        </div>
+      </div>
+    </div>

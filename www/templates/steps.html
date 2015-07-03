@@ -1,0 +1,30 @@
+  <ul class="list">
+    <li>
+      Ensure Faas agent is running.
+<div class="code-area">
+<pre hljs>
+$ ps | grep faas
+
+8035 ttys001    0:00.57 node ./node_modules/faas/bin/faas-ix-server
+8097 ttys003    0:00.00 grep faas
+
+</pre>
+</div>
+    </li>
+    <li>Check the configuration is correct in the start-agent.sh file.
+<div class="code-area">
+<pre hljs>
+$ cat faas-agent.sh
+
+#!/bin/sh
+
+export NODE_PATH=/usr/lib/node_modules
+export FAAS_API_KEY=your key
+export FAAS_API_SECRET=your secret
+export FAAS_IX_API_DIR=my-apis
+./node_modules/faas/bin/faas-ix-server
+
+</pre>
+</div>
+</li>
+  </ul>

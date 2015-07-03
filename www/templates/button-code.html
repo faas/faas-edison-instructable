@@ -1,0 +1,14 @@
+<pre hljs>
+
+var groveSensor = require('jsupm_grove');
+
+var button = new groveSensor.GroveButton(5);
+
+exports.buttonStatus = function(cb) {
+  var val = button.value();
+  cb(null, {
+    'b': val
+  });
+}
+
+</pre>

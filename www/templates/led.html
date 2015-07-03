@@ -1,0 +1,20 @@
+    <div ng-if="noService" ng-include src="'/templates/unavailable.html'"></div>
+
+    <div class="row">
+      <div class="col text-center">
+        <ion-toggle ng-click="toggleRed()" ng-model="led.red" ng-checked="led.red" toggle-class="toggle-assertive"><span class="assertive">Red LED</span></ion-toggle>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <ion-toggle ng-click="toggleGreen()" ng-model="led.green" ng-checked="led.green" toggle-class="toggle-balanced"><span class="balanced">Green LED</span></ion-toggle>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <ion-toggle ng-click="toggleBlue()" ng-model="led.blue" ng-checked="led.blue" toggle-class="toggle-positive"><span class="positive">Blue LED</span></ion-toggle>
+      </div>
+    </div>
+

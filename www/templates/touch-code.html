@@ -1,0 +1,14 @@
+<pre hljs>
+
+var touchSensor = require('jsupm_ttp223');
+
+var touch = new touchSensor.TTP223(7);
+
+exports.touchStatus = function(cb) {
+  var val = touch.isPressed();
+  cb(null, {
+    't': val
+  });
+}
+
+</pre>

@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-nav-title>
+    <img class="logo" src="img/logo-top.png">
+  </ion-nav-title>
+  <ion-content class="padding">
+    <div class="row">
+      <div class="col text-center">
+        <h4>Intel Edison - Sensors Demo</h4>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item item-icon-right item-thumbnail-left item-text-wrap"
+                ng-repeat="sensor in sensors"
+                ng-href="#/tab/dash/{{sensor.page}}">
+        <img class="list-image" ng-src="img/sensors/{{sensor.image}}">
+        <h2>{{sensor.title}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

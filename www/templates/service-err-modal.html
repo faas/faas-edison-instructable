@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title calm">Oops!</h1>
+    <div class="button button-clear" ng-click="closeServiceError()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="row">
+      <div class="col text-center">
+        <img class="logo" src="img/logo-top.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h4 class="title assertive">service is unavailable</h4>
+        <h5>Please verify your edison module setup.</h5>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">
+        Instructions
+      </div>
+      <div class="item item-text-wrap">
+        Here are some tips to verify:
+        <div ng-include="'templates/steps.html'" include-replace></div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar ng-click="retry()">
+    <p class="title calm">Retry</p>
+  </ion-footer-bar>
+</ion-modal-view>

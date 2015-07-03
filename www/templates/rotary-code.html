@@ -1,0 +1,18 @@
+<pre hljs>
+
+var groveSensor = require('jsupm_grove');
+
+var rotary = new groveSensor.GroveRotary(1);
+
+exports.rotaryStatus = function(cb) {
+  var val = rotary.abs_value();
+  var deg = rotary.abs_deg();
+  var rad = rotary.abs_rad();
+  cb(null, {
+    'v': Math.round(parseInt(val)),
+    'd': Math.round(parseInt(deg)),
+    'r': Math.round(parseInt(rad))
+  });
+}
+
+</pre>
