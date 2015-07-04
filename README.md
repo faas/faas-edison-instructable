@@ -1,1 +1,2 @@
-# faas-edison-instructable
+# Faas - Dropbox for Intel Edison APIs
+
