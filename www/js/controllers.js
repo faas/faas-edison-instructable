@@ -47,8 +47,8 @@ angular.module('starter.controllers', [])
 .controller('LoginCtrl', function($scope, $location, $ionicLoading) {
 
   $scope.login = {
-    email:'anbuselvan.p@gmail.com',
-    password:'zJtDcs2RSD3J'
+    email:'your email',
+    password:'your password'
   }
 
   $scope.executeLogin = function(data)
